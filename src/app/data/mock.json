@@ -1,0 +1,58 @@
+[
+  {
+    "name": "John Smith",
+    "position": "Nothing Special",
+    "picture": "path/to/image/after/collection-in-assets-img-folder",
+    "facts": [
+      {
+        "heading": "Nice Heading",
+        "article": "Curabitur blandit tempus ardua ridiculus sed magna. Tu quoque, Brute, fili mi, nihil timor populi, nihil! At nos hinc posthac, sitientis piros Afros. Nihil hic munitissimus habendi senatus locus, nihil horum.",
+        "sources": [
+          {
+            "title": "Awesome Source",
+            "url": "http://awesome-source.com"
+          },
+          {
+            "title": "Diff Awesome Source",
+            "url": "http://diff-awesome-source.com"
+          }
+        ]
+      },
+      {
+        "heading": "Nice Heading Too",
+        "article": "Contra legem facit qui id facit quod lex prohibet. Salutantibus vitae elit libero, a pharetra augue. Quis aute iure reprehenderit in voluptate velit esse.",
+        "sources": [
+            {
+            "title": "Cool Source",
+            "url": "http://cool-source.com"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jane Doe",
+    "position": "Even Less Special",
+    "picture": "path/to/image/after/collection-in-assets-img-folder",
+    "facts": [
+      {
+        "heading": "Nice Heading",
+        "article": "Curabitur blandit tempus ardua ridiculus sed magna. Tu quoque, Brute, fili mi, nihil timor populi, nihil! At nos hinc posthac, sitientis piros Afros. Nihil hic munitissimus habendi senatus locus, nihil horum.",
+        "source": {
+          "title": "Awesome Source",
+          "url": "http://awesome-source.com"
+        }
+      },
+      {
+        "heading": "Nice Heading Too",
+        "article": "Contra legem facit qui id facit quod lex prohibet. Salutantibus vitae elit libero, a pharetra augue. Quis aute iure reprehenderit in voluptate velit esse.",
+        "sources": [
+            {
+            "title": "Cool Source",
+            "url": "http://cool-source.com"
+          }
+        ]
+      }
+    ]
+  }
+]

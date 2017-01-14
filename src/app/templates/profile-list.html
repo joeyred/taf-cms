@@ -1,0 +1,75 @@
+<!-- LIST OF PEOPLE -->
+<aside class="column medium-3 person-list">
+
+  <div class="row"><!-- OPEN ROW -->
+    <!-- Search -->
+    <div class="column">
+
+      <input type="text" placeholder="Search">
+
+    </div>
+
+  </div><!-- CLOSE ROW -->
+
+  <div class="row"><!-- OPEN ROW -->
+
+    <div class="column">
+      <button
+        type="button"
+        class="button"
+        ng-click="addPerson()">
+        <i class="fi-plus"></i> New Person
+      </button>
+
+    </div>
+
+    <div class="column shrink align-self-right">
+      <button
+        type="button"
+        class="button secondary"
+        ng-click="editPeople = !editPeople">
+        Edit
+      </button>
+    </div>
+
+  </div><!-- CLOSE ROW -->
+
+  <div class="row"><!-- OPEN ROW -->
+
+    <div class="column">
+
+      <ul class="vertical menu">
+
+        <li ng-repeat="person in people">
+          <div class="row"><!-- OPEN NESTED ROW -->
+
+            <!-- Delete Button -->
+            <div class="column" ng-show="editPeople">
+              <button class="button alert">Delete</button>
+            </div>
+
+            <!-- Link -->
+            <button class="editor-view-link" href="" ng-click="">
+              <div class="column">
+                <span>
+                  {{person.name}}
+                </span>
+                <span>
+                  <small>{{person.position}}</small>
+                </span>
+              </div>
+            </button>
+
+          </div><!-- CLOSE NESTED ROW -->
+        </li>
+
+      </ul>
+
+    </div><!-- CLOSE ROW -->
+
+  </div>
+
+
+
+
+</aside>

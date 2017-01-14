@@ -1,0 +1,17 @@
+.person-list {
+  .menu {
+    li {
+      padding: 0.5rem;
+      button {
+        cursor: pointer;
+        span {
+          display: block;
+          text-align: left;
+        }
+        &.active {
+          background: $primary-color;
+        }
+      }
+    }
+  }
+}

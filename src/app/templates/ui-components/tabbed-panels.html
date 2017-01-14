@@ -1,0 +1,11 @@
+<div class="row">
+  <tab
+      class="column medium-4 tab"
+      ng-repeat="panel in tabbedPanels.panels"
+      ng-click="tabbedPanels.select(panel)"
+      ng-class="panel.activeClass">
+    <h2>{{panel.heading}}</h2>
+  </tab>
+</div>
+
+<tab-panels class="editor-panels row" ng-transclude></tab-panels>

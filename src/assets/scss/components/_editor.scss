@@ -1,0 +1,54 @@
+.profile-editor {
+  .editor-panel {
+    background: $light-gray;
+    padding: 1.5rem 1.5rem;
+  }
+  .section-heading {
+    background: $primary-color;
+    color: $white;
+  }
+  .tab {
+    background: $primary-color;
+    color: $white;
+    cursor: pointer;
+    &.active {
+        background: $light-gray;
+        color: $black;
+    }
+  }
+  .item-heading {
+    background-color: $secondary-color;
+    color: $white;
+  }
+  .basic-info {
+    margin-bottom: $global-margin;
+    background: $light-gray;
+  }
+  .facts {
+    background: $light-gray;
+  }
+  .facts-list {
+    background: $medium-gray;
+    .section-heading {
+      background: $secondary-color;
+      color: $white;
+    }
+  }
+  .sources-list {
+    margin-bottom: $header-margin-bottom;
+    &:last-child {
+      margin-bottom: $header-margin-bottom;
+    }
+    li {
+      background: $dark-gray;
+      margin-bottom: $header-margin-bottom;
+
+    }
+  }
+  .sources-section {
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

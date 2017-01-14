@@ -1,0 +1,45 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAF Content Managment App</title>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="assets/foundation-icons/foundation-icons.css" type="text/css" /> -->
+  </head>
+
+  <body ng-app="contentManagmentApp">
+
+
+    <div class="row">
+      <div class="column">
+        <h1>Trump Administration Facts - CMS</h1>
+      </div>
+    </div>
+
+    <div class="app-inner" ng-controller="mainCtrl">
+
+
+      <div class="row">
+
+        <profile-list></profile-list>
+
+        <!-- CONTENT EDITING FORM -->
+        <main class="column medium-9 profile-editor">
+
+          <editor></editor>
+
+        </main>
+
+      </div>
+    </div>
+
+
+    <!-- <script src="angular.min.js"></script> -->
+    <script src="app.js"></script>
+    <!-- <script src="assets/js/public.js"></script> -->
+
+  </body>
+</html>

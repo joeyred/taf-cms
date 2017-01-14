@@ -1,0 +1,10 @@
+<!--
+Accordion Panel
+
+UI Component: Accordion
+-->
+
+<li class="column small-12">
+  <div ng-transclude="heading" ng-click="active = !active"></div>
+  <div class="row" ng-transclude ng-show="active"></div>
+</li>
