@@ -6,7 +6,7 @@ angular.module('contentManagmentApp')
     console.log('Hello World Controller');
   };
   $scope.addPerson = function() {
-    var person = {name: 'New Person'};
+    var person = {name: 'New Person', facts: []};
     $scope.people.push(person);
   };
   // Get data

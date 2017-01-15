@@ -2,6 +2,20 @@
 
 <div class="column small-12">
 
+  <!-- Add & Edit -->
+  <div class="row">
+    <div class="column">
+      <button class="button" ng-click="addFact(currentProfile)">
+        <i class="fi-plus"></i> Add Fact
+      </button>
+    </div>
+    <div class="column shrink align-self-right">
+      <button class="button secondary">
+        Edit
+      </button>
+    </div>
+  </div>
+
   <!-- FACT LIST -->
   <accordion-panels class="facts-list">
     <!-- FACT -->
@@ -43,6 +57,20 @@
               <h4>Sources</h4>
             </div>
           </div>
+
+          <div class="row">
+            <div class="column">
+              <button class="button" ng-click="addSource(fact)">
+                <i class="fi-plus"></i> Add Source
+              </button>
+            </div>
+            <div class="column shrink align-self-right">
+              <button class="button secondary">
+                Edit
+              </button>
+            </div>
+          </div>
+
           <accordion-panels class="sources-list">
             <accordion-panel ng-repeat="source in fact.sources">
               <accordion-heading class="row item-heading">
