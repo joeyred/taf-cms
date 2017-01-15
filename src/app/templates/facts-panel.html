@@ -3,13 +3,13 @@
 <div class="column small-12">
 
   <!-- FACT LIST -->
-  <accordion-panels>
+  <accordion-panels class="facts-list">
     <!-- FACT -->
-    <accordion-panel>
+    <accordion-panel ng-repeat="fact in currentProfile.facts">
       <accordion-heading class="item-heading row">
         <!-- Title -->
         <div class="column">
-          <h3>Fact Title</h3>
+          <h3>{{fact.heading}}</h3>
         </div>
 
         <div class="column shrink align-self-right align-self-middle">
@@ -23,7 +23,7 @@
         <div class="column small-12">
           <label>
             Heading
-            <input type="text" placeholder="A Nice Heading">
+            <input type="text" placeholder="A Nice Heading" ng-model="fact.heading">
           </label>
         </div>
 
@@ -31,7 +31,7 @@
         <div class="column small-12">
           <label>
             The Fact
-            <textarea placeholder="All that info..."></textarea>
+            <textarea placeholder="All that info..." ng-model="fact.article"></textarea>
           </label>
         </div>
         <!-- SOURCES -->
@@ -43,18 +43,18 @@
               <h4>Sources</h4>
             </div>
           </div>
-          <accordion-panels>
-            <accordion-panel>
+          <accordion-panels class="sources-list">
+            <accordion-panel ng-repeat="source in fact.sources">
               <accordion-heading class="row item-heading">
                 <div class="column">
-                  <h5>Source Title</h5>
+                  <h5>{{source.title}}</h5>
                 </div>
               </accordion-heading>
               <div class="column medium-6">
 
                   <label>
                     Title
-                    <input type="text" placeholder="Source Name">
+                    <input type="text" placeholder="Source Name" ng-model="source.title">
                   </label>
 
                 </div>
@@ -63,7 +63,7 @@
 
                   <label>
                     URL
-                    <input type="url" placeholder="Link">
+                    <input type="url" placeholder="Link" ng-model="source.url">
                   </label>
 
                 </div>
