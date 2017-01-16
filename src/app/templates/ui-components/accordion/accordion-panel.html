@@ -5,6 +5,10 @@ UI Component: Accordion
 -->
 
 <li class="column small-12">
-  <div ng-transclude="heading" ng-click="active = !active"></div>
+  <div class="row collapse">
+    <div class="column" ng-transclude="heading" ng-click="active = !active"></div>
+    <div class="column shrink align-self-right align-self-middle" ng-transclude="headingUi"></div>
+  </div>
+
   <div class="row" ng-transclude ng-show="active"></div>
 </li>
