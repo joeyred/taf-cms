@@ -34,7 +34,8 @@ function accordionPanelDirective() {
   return {
     restrict:   'E', // specifies the directive is an element.
     transclude: {
-      heading: 'accordionHeading'
+      heading:   'accordionHeading',
+      headingUi: 'accordionHeadingUi'
     },
     replace:     true,
     templateUrl: 'templates/ui-components/accordion/accordion-panel.html',
