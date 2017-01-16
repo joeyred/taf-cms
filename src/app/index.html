@@ -29,7 +29,8 @@
         <!-- CONTENT EDITING FORM -->
         <main class="column medium-9 profile-editor">
 
-          <editor></editor>
+          <welcome ng-hide="editorIsActive" class="welcome row align-center"></welcome>
+          <editor ng-show="editorIsActive"></editor>
 
         </main>
 
