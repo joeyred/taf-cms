@@ -7,6 +7,9 @@ angular.module('contentManagmentApp')
   ctrl.profiles = $scope.people;
 
   $scope.selectProfile = function(person) {
+    if (!$scope.editorIsActive) {
+      $scope.editorIsActive = true;
+    }
     $scope.currentProfile = person;
     // ctrl.selectedProfile = person;
     // angular.forEach(ctrl.profiles, function(profile) {

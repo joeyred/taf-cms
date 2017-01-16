@@ -14,3 +14,19 @@
 [ng-click] {
   cursor: pointer;
 }
+
+// Icons
+i.big {
+  font-size: 6rem;
+}
+
+.welcome {
+  padding: 3rem 1rem;
+  .wlecome-header {
+    margin-bottom: 4rem;
+    color: $primary-color;
+  }
+  i {
+    color: $success-color;
+  }
+}

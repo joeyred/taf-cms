@@ -2,7 +2,7 @@
 
 angular.module('contentManagmentApp')
 .controller('editorCtrl', function($scope) {
-  $scope.person = $scope.currentProfile;
+  $scope.editorIsActive = false;
 
   $scope.addFact = function(currentProfile) {
     var fact = {};
