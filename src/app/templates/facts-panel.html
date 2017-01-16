@@ -10,7 +10,7 @@
       </button>
     </div>
     <div class="column shrink align-self-right">
-      <button class="button secondary">
+      <button class="button secondary" ng-click="editFacts = !editFacts">
         Edit
       </button>
     </div>
@@ -20,85 +20,110 @@
   <accordion-panels class="facts-list">
     <!-- FACT -->
     <accordion-panel ng-repeat="fact in currentProfile.facts">
+      <!-- HEADING -->
       <accordion-heading class="item-heading row">
+
         <!-- Title -->
         <div class="column">
           <h3>{{fact.heading}}</h3>
         </div>
-
-        <div class="column shrink align-self-right align-self-middle">
-          <button type="button" ng-click="">
-            <i class="fi-pencil"></i>
-          </button>
-        </div>
-
       </accordion-heading>
+      <accordion-heading-ui class="row" ng-show="editFacts">
+        <!-- EDIT Buttons -->
 
-        <div class="column small-12">
-          <label>
-            Heading
-            <input type="text" placeholder="A Nice Heading" ng-model="fact.heading">
-          </label>
+          <!-- <div class="column shrink">
+            <button type="button" class="button">
+              <i class="fi"></i>
+            </button>
+          </div>
+          <div class="column shrink">
+            <button type="button" class="button">
+              <i class="fi-page-edit"></i> Draft
+            </button>
+          </div> -->
+          <!-- Trash -->
+          <div class="column shrink">
+            <button type="button" class="button">
+              <i class="fi-trash alert"></i> Trash
+            </button>
+          </div>
+      </accordion-heading-ui>
+
+
+
+      <!-- CONTENT -->
+      <div class="column small-12">
+        <label>
+          Heading
+          <input type="text" placeholder="A Nice Heading" ng-model="fact.heading">
+        </label>
+      </div>
+
+
+      <div class="column small-12">
+        <label>
+          The Fact
+          <textarea placeholder="All that info..." ng-model="fact.article"></textarea>
+        </label>
+      </div>
+      <!-- SOURCES -->
+      <div class="column small-12 sources-section">
+
+        <div class="row">
+          <!-- Heading -->
+          <div class="column small-12 section-heading">
+            <h4>Sources</h4>
+          </div>
         </div>
 
-
-        <div class="column small-12">
-          <label>
-            The Fact
-            <textarea placeholder="All that info..." ng-model="fact.article"></textarea>
-          </label>
+        <div class="row">
+          <div class="column">
+            <button class="button" ng-click="addSource(fact)">
+              <i class="fi-plus"></i> Add Source
+            </button>
+          </div>
+          <div class="column shrink align-self-right">
+            <button class="button secondary" ng-click="editSource = !editSource">
+              Edit
+            </button>
+          </div>
         </div>
-        <!-- SOURCES -->
-        <div class="column small-12 sources-section">
 
-          <div class="row">
-            <!-- Heading -->
-            <div class="column small-12 section-heading">
-              <h4>Sources</h4>
-            </div>
-          </div>
+        <accordion-panels class="sources-list">
+          <accordion-panel ng-repeat="source in fact.sources">
+            <accordion-heading class="row item-heading">
+              <div class="column">
+                <h5>{{source.title}}</h5>
+              </div>
+            </accordion-heading>
+            <accordion-heading-ui class="row" ng-show="editSource">
+              <div class="column shrink">
+                <button type="button" class="button">
+                  <i class="fi-trash alert"></i> Trash
+                </button>
+              </div>
+            </accordion-heading-ui>
+            <div class="column medium-6">
 
-          <div class="row">
-            <div class="column">
-              <button class="button" ng-click="addSource(fact)">
-                <i class="fi-plus"></i> Add Source
-              </button>
-            </div>
-            <div class="column shrink align-self-right">
-              <button class="button secondary">
-                Edit
-              </button>
-            </div>
-          </div>
+                <label>
+                  Title
+                  <input type="text" placeholder="Source Name" ng-model="source.title">
+                </label>
 
-          <accordion-panels class="sources-list">
-            <accordion-panel ng-repeat="source in fact.sources">
-              <accordion-heading class="row item-heading">
-                <div class="column">
-                  <h5>{{source.title}}</h5>
-                </div>
-              </accordion-heading>
+              </div>
+
               <div class="column medium-6">
 
-                  <label>
-                    Title
-                    <input type="text" placeholder="Source Name" ng-model="source.title">
-                  </label>
+                <label>
+                  URL
+                  <input type="url" placeholder="Link" ng-model="source.url">
+                </label>
 
-                </div>
+              </div>
+          </accordion-panel>
+        </accordion-panels>
 
-                <div class="column medium-6">
-
-                  <label>
-                    URL
-                    <input type="url" placeholder="Link" ng-model="source.url">
-                  </label>
-
-                </div>
-            </accordion-panel>
-          </accordion-panels>
-
-        </div>
+      </div>
 
     </accordion-panel>
   </accordion-panels>
